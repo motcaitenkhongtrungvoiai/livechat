@@ -27,6 +27,7 @@ while ($row = mysqli_fetch_assoc($query)) {
     <p>'. $you . $msg .'</p>
     </div>
     </div>
+    <div class="status-dot'.$offline.' "> <span class="material-symbols-outlined">pending</span> </div>
     </a>';
 }
 
