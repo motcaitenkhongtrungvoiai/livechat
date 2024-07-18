@@ -36,7 +36,7 @@ if (!empty($fname) && !empty($lname) && !empty($email) && !empty($password)) {
                             $status = "Online";
                             // có thể mã hóa mật khẩu người dùng bằng hàm password_hasn() để đưa vào CSDL
 
-                            $insert_query = mysqli_query($conn, "INSERT INTO `users`( `unique_id`, `fname`, `lname`, `email`, `password`, `status`,`img`) VALUES ('{$ran_id}','{$fname}','{$lname}','{$email}','{$password}','{$status}','{$image_name}')");
+                            $insert_query = mysqli_query($conn, "INSERT INTO `users`( `unique_id`, `fname`, `lname`, `email`, `password`, `status`,`img`) VALUES ('{$ran_id}','{$fname}','{$lname}','{$email}','{$password}','{$status}','{$new_image_name}')");
                               if($insert_query){
                                 $select_sql2=mysqli_query($conn,"select *from `users` where `email`='{$email}'");
                                 if(mysqli_num_rows($select_sql2)>0){
