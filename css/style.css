@@ -1,0 +1,273 @@
+/*  */
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: rgb(196, 191, 191);
+    padding: 0 10px;
+}
+
+.wrapper {
+    background: #fff;
+    max-width: 450px;
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1);
+}
+
+.form {
+    padding: 25px 30px;
+}
+
+.form header {
+    font-size: 24px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    border-bottom: 1px solid purple;
+}
+
+.form form {
+    margin: 20px 0;
+}
+
+.form form .error-text {
+    color: #0c0c0c;
+    padding: 8px 10px;
+    text-align: center;
+    font-size: large;
+    border-radius: 5px;
+    background-color: #db7676;
+    border: 2px solid rgb(236, 8, 8);
+    margin-bottom: 10px;
+    width: 100%;
+    height: auto;
+    display: none;
+}
+
+.form form .name-details {
+    display: flex;
+}
+
+.form .name-details .field:first-child {
+    margin-right: 10px;
+
+}
+
+.form .name-details .field:last-child {
+    margin-left: 10px;
+}
+
+.form form .field {
+    display: flex;
+    margin-bottom: 10px;
+    flex-direction: column;
+    position: relative;
+}
+
+.form form .field label {
+    margin-bottom: 2px;
+}
+
+.form form .input input {
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.form form .field input {
+    outline: none;
+}
+
+.form form .image input {
+    font-size: 17px;
+}
+
+.form form .button input {
+    height: 45px;
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    background: #835353;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 13px;
+}
+
+.form form .field i:active::before {
+    color: rgb(222, 107, 65);
+    content: "\f070";
+}
+
+.form .link {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 17px;
+}
+
+.form .link a {
+    color: peru
+}
+
+.form .link a:hover {
+    text-decoration: underline;
+
+}
+
+
+.users {
+    padding: 25px 30px;
+}
+
+.users header,
+.users-list a {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid purple;
+    justify-content: space-between;
+
+}
+
+.users header .logout {
+    display: block;
+    background: rgb(173, 93, 19);
+    color: #fff;
+    outline: none;
+    border: none;
+    padding: 7px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 17px;
+}
+
+.wrapper img {
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid rgb(187, 96, 11);
+}
+
+.wrapper header img {
+    height: 50px;
+    width: 50px;
+}
+
+:is(.users, .users-list) .content {
+    display: flex;
+    align-items: center;
+}
+
+:is(.users, .users-list) .content .details {
+
+    color: rgb(26, 30, 30);
+    margin-left: 20px;
+}
+
+:is(.users, .users-list) .details span {
+
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.users .search {
+    margin: 20px 0;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    font-size: larger;
+}
+
+.users form .search input  {
+    position: absolute;
+    height: 42px;
+    width: calc(100% - 50px);
+    font-size: 16px;
+    padding: 0 13px;
+    border: 1px solid green;
+    outline: none;
+    border-radius: 5px 0 0 5px;
+    
+    transition: all 0.2 ease;
+}
+
+
+
+.users .search button {
+    position: relative;
+    z-index: 1;
+    width: 45px;
+    height: 42px;
+    font-size:17px;
+    cursor: pointer;
+    border: none;
+    background-color: #fff;
+    color: #db7676;
+    outline: none;
+    border-radius: 0 5px 5px 0;
+    transition: all 0.5s ease;
+    
+}
+
+.users .search button span::before{
+    content: 'manage_search';
+}
+
+
+.users .search .active {
+  
+    color: rgb(178, 2, 2);
+   
+}
+
+.users .search .active span::before{
+    content: 'close';
+    
+    
+}
+.users-list{
+    max-height: 350px;
+    overflow-y:auto;
+}
+:is(.users-list,.chat-box)::-webkit-scrollbar{
+    width: 0px;
+}
+.users-list a{
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    padding-right: 15px;
+    border-bottom-color:darkred ;
+}
+.users-list a:last-child{
+    margin-bottom: 0px;
+    border-bottom:none ;
+}
+.users-list a img{
+    height:40px;
+    width: 40px;
+}
+.users-list a .details  p{
+    color: #835353;
+}
+.users-list a .status-dot
+{
+    font-size:12px;
+    color:aquamarine;
+    padding-left: 10px;
+}
+.users-list a .status-dot .offline{
+    color: #ccc;
+}
