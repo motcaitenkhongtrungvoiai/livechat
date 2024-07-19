@@ -35,7 +35,7 @@ if (!isset($_SESSION['unique_id'])) {
                <form  method="post">
                     <div class="search">
                         <span class="text">chọn người để chat</span>
-                        <input type="text" placeholder="nhấn tên người chat" name ="searchTerm">
+                        <input type="text" placeholder="nhấn tên người chat" name ="searchTerm" autocomplete="off">
                         <button><span class="material-symbols-outlined"></span></button>                       
                     </div>
               </form>
