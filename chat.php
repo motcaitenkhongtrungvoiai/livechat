@@ -34,7 +34,7 @@ if (!isset($_SESSION['unique_id'])) {
             <div class="chat-box">
 
             </div>
-            <form action="#" class="typing-area">
+            <form class="typing-area" method="POST">
                 <input type="text" class="incoming_id" name="incoming__id" value="<?php echo $user_id ?>" hidden>
                 <input type="text" name="message" class="input-field" placeholder="gõ tin nhắn ở đây"
                     autocomplete="off">
@@ -44,5 +44,8 @@ if (!isset($_SESSION['unique_id'])) {
         </section>
     </div>
 </body>
+<script src="js/chat.js?v=<?php echo time(); ?>">
+
+</script>
 
 </html>
