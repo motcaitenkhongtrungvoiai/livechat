@@ -35,7 +35,7 @@ if (!isset($_SESSION['unique_id'])) {
 
             </div>
             <form class="typing-area" method="POST">
-                <input type="text" class="incoming_id" name="incoming__id" value="<?php echo $user_id ?>" hidden>
+                <input type="text" class="incoming_id" name="incoming_id" value="<?php echo $user_id ?>" hidden>
                 <input type="text" name="message" class="input-field" placeholder="gõ tin nhắn ở đây"
                     autocomplete="off">
                 <button><span class="material-symbols-outlined">send</span></button>
