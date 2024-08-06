@@ -8,10 +8,6 @@ form.onsubmit = (e) => {
   e.preventDefault();
 };
 
-inputField.focus();
-function myFunction() {
-  console.log("hello");
-}
 inputField.onkeyup = () => {
   if (inputField.value != "") {
     sendBtn.classList.add("active");
@@ -38,7 +34,7 @@ chatBox.onmouseenter = () => {
   chatBox.classList.add("active");
 };
 
-chatBox.ommouseleave = () => {
+chatBox.onmouseleave = () => {
   chatBox.classList.remove("active");
 };
 
@@ -46,12 +42,13 @@ setInterval(() => {
   let xhr = new XMLHttpRequest();
   xhr.onload = () => {
     if (xhr.readyState === 4 && xhr.status === 200) {
-      let data = xhr.response;
-      chatBox.innerHTML = data;
-      scrollToBottom();
+      if (!chatBox.classList.contains("active")) {
+        chatBox.innerHTML = xhr.responseText;
+        scrollToBottom();
+      }
     }
   };
- xhr.open("POST", "php/get_chat.php?incoming_id="+incoming_id, true);
+  xhr.open("POST", "php/get_chat.php?incoming_id=" + incoming_id, true);
   xhr.send();
 }, 2000);
 
