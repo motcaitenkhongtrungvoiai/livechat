@@ -50,7 +50,7 @@ setInterval(() => {
   };
   xhr.open("POST", "php/get_chat.php?incoming_id=" + incoming_id, true);
   xhr.send();
-}, 2000);
+}, 200);
 
 function scrollToBottom() {
   chatBox.scrollTop = chatBox.scrollHeight;

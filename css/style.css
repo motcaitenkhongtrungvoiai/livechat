@@ -264,12 +264,14 @@ body {
 }
 .users-list a .status-dot
 {
+    color: #022ff5; 
     font-size:12px;
-    color:rgb(63, 9, 179);
     padding-left: 10px;
 }
-.users-list a .status-dotoffline{
-    color: #f50202;
+.users-list a  .offline{
+    color: #f50202; 
+    font-size:12px;
+    padding-left: 10px;
 }
 
 .chat-area header{
