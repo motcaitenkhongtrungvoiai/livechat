@@ -1,18 +1,15 @@
-const searchBar =document.querySelector("form .search input"),
-userList=document.querySelector(".users-list");
+const searchBar = document.querySelector("form .search input"),
+  userList = document.querySelector(".users-list");
 
-
-
+//hàm tìm kiếm thôi 
 searchBar.onkeyup = () => {
-    let hind= searchBar.value;
-    let xhttp = new XMLHttpRequest;
-     xhttp.onreadystatechange =() => {
-        if(xhttp.readyState === 4 && xhttp.status === 200){
-         let data=xhttp.responseText;
-          userList.innerHTML = data;
-        }
-     }
-     xhttp.open("POST","php/search.php?searchTerm=" + hind,true);
-     xhttp.send();
-}
-
+  let hind = searchBar.value.trim();
+  fetch("php/search.php?searchTerm=" + hind, { method: "POST" })
+  .then((response) => response.text())
+  .then((data)=>{
+   userList.innerHTML=data;
+  })
+  .catch((error) => {
+   console.error("something go wrong with hind");
+  })
+};
