@@ -10,6 +10,6 @@ searchBar.onkeyup = () => {
    userList.innerHTML=data;
   })
   .catch((error) => {
-   console.error("something go wrong with hind");
+   console.error("something go wrong with hind",error);
   })
 };
